@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 
-@Repository("fakeDao") // instantiated as a bean
+@Repository("fakeDao") // instantiated as a bean. This is a fake DAO because it is using in memory list to act as a database.
 public class FakePersonDataAccessService implements PersonDao {
 
     private static List<Person> DB = new ArrayList<>();

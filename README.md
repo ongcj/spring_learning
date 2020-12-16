@@ -1,6 +1,7 @@
 # Spring Learning
 Notes and example codes when learning Spring Boot 
 
+# Part 1 (Overview and building Spring Boot as Backend)
 ## Spring Boot
 It is a framework for building java application very fast.  They provide things such as connectivity to databases and we do not need to configure low level code to get it up and running. It provide a platform for building backend application.
 
@@ -33,5 +34,18 @@ There is a bunch of section, making it very easy for you to configure and saving
 ![title](readme_asset/spring_test_quick_start.png)
 
 Running the code in src/main/java shows that tomcat is started on port 8080. And under resource, we have static and templates. Static is where all the web resource are at for web application, and templates where all the template for web application. Next is the application.properties, where we can define different properties for different environment. 
+
+
+# Part 1 (Use Postgres as the main Database)
+
+## Start a Postgres Database
+`docker run --name postgres-spring -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:alpine`
+Since the focus of this repo is Spring Boot, stuff regarding Postgres is omitted. But for the application to work correctly, we need to following steps. 
+- go into interactive mode
+- create database called demodb
+- create table call person
+- insert few person for testing.
+
+With that, the backend server implemented in Spring uses postgres as database, and this can be easily switch.
 
 
