@@ -18,4 +18,9 @@ public class FakePersonDataAccessService implements PersonDao {
         DB.add(new Person(id, person.getName()));
         return 1; // insertion always works
     }
+
+    @Override
+    public List<Person> selectAllPeople() {
+        return DB;
+    }
 }
